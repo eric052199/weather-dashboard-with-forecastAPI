@@ -1,0 +1,98 @@
+/* Center the dashboard and add some spacing */
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the date input and button */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+input[type="date"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+td {
+  background-color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+/* Make chart and table responsive */
+.chart-container {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  input[type="date"] {
+    margin-bottom: 10px;
+  }
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.loading-message {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 10px;
+}

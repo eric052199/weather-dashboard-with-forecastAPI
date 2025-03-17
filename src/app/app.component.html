@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>🌤️ Weather Dashboard</h2>
+
+  <!-- Input container -->
+  <div class="input-container">
+    <input type="date" [(ngModel)]="selectedDate" />
+    <button (click)="fetchForecastData()">🔄 Refresh Data</button>
+  </div>
+
+
+
+  <!-- ✅ Show Loading Message -->
+  <p *ngIf="isLoading" class="loading-message">⏳ Fetching data, please wait...</p>
+
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+  <div class="table-container">
+    <app-weather-table *ngIf="!isLoading && !errorMessage" [weatherData]="weatherData"></app-weather-table>
+  </div>
+  <div class="chart-container">
+    <app-weather-chart *ngIf="!isLoading && !errorMessage" [weatherData]="weatherData"></app-weather-chart>
+  </div>
+</div>
